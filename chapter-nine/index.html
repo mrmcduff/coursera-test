@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="DIApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body {font-size: 1.3em} </style>
+    <title>DI in Javascript</title>
+  </head>
+  <body>
+    <h1>DI in Angular</h1>
+    <div ng-controller="DIController">
+      Your name:
+      <input type="text"
+        ng-model="name"
+        ng-blur="upper();">
+    </div>
+  </body>
+</html>
