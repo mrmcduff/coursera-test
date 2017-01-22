@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app='CustomFilterModule'>
+  <head>
+    <meta charset="utf-8">
+    <title>Custom Filter Example</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body {font-size: 1.3em} </style>
+  </head>
+  <body>
+    <h1>Custom Filters</h1>
+    <div ng-controller='CustomFilterController'>
+      <input type="text" ng-model="userInput" ng-blur="capitalize();">
+      <br>
+      {{userInput}}
+    </div>
+  </body>
+</html>
