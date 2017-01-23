@@ -11,6 +11,9 @@ function CustomFilterController($scope, capitalFilter) {
   $scope.capitalize = function () {
     $scope.userInput = capitalFilter($scope.userInput);
   };
+  $scope.showNumberOfWatchers = function() {
+    console.log("# of watchers: ", $scope.$$watchersCount)
+  }
 }
 
 function CapitalizeFilterFactory() {
