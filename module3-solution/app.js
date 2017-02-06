@@ -52,7 +52,8 @@ function MenuSearchService($http, ApiPath) {
   var service = this;
 
   service.getMatchedMenuItems = function(searchTerm) {
-    console.log("Searching for " + searchTerm + " on " + ApiPath);
+    console.log("Searching for " + searchTerm);
+    console.log("Reaching out to API at " + ApiPath);
     return $http({
       method: "GET",
       url: (ApiPath),
