@@ -31,19 +31,6 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     }
   })
 
-  // // Item detail
-  // .state('categoryDetail', {
-  //   url: '/category-detail/{categoryShortName}',
-  //   templateUrl: 'src/menuapp/templates/category-detail-main.template.html',
-  //   controller: 'ItemsController as itemList',
-  //   resolve: {
-  //     items: ['MenuDataService',
-  //     function (MenuDataService, $stateParams) {
-  //       return MenuDataService.getItemsForCategory($stateParams.categoryShortName);
-  //     }]
-  //   }
-  // });
-
   .state('categoryDetail', {
     url: '/category-detail/{categoryShortName}',
     templateUrl: 'src/menuapp/templates/category-detail-main.template.html',
