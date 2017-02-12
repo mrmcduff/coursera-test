@@ -1,7 +1,5 @@
 <div>Category Detail List</div>
-<a ui-sref="home">Home</a> &lt; <span>List</span>
+<a ui-sref="home">Home</a> &lt; <a ui-sref="categories">List</a> &lt; <span>{{itemsList.name}}</span>
 
-<h3>Category Detail Items</h3>
+<h3>{{itemsList.name}} Menu Items</h3>
 <category-detail-list items="itemsList.categoryDetailItems"></category-detail-list>
-
-<!-- <ui-view></ui-view> -->

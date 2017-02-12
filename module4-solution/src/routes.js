@@ -58,7 +58,6 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
           method: "GET",
           url: ("https://davids-restaurant.herokuapp.com/menu_items.json?category=" + $stateParams.categoryShortName)
         }).then(function(result) {
-          console.log(result.data.menu_items);
           return result.data.menu_items;
         });
       }]
