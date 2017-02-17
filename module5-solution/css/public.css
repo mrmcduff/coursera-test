@@ -113,7 +113,22 @@ h3.menu-item-title {
 }
 /* END SINGLE CATEGORY PAGE */
 
+.input {
+  background-color: #8b8989;
+}
 
+.inputbutton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
 /********** Large devices only **********/
 @media (min-width: 1200px) {
   .container .jumbotron {
