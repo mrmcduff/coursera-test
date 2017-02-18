@@ -1,9 +1,18 @@
 <div class="container">
 
   <div ng-if="infoCtrl.sessionFavorite">
-    Found a fave!
+    Found your favorite item! <br>
+    Name: {{infoCtrl.sessionFavorite.name}} <br>
+    Description: {{infoCtrl.sessionFavorite.description}} <br>
+    <div>{{infoCtrl.sessionFavorite.short_name}}</div>
+    <img
+      width="250"
+      height="150"
+      ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.sessionFavorite.short_name}}.jpg"
+      alt="{{infoCtrl.sessionFavorite.name}}">
   </div>
   <div ng-if="!infoCtrl.sessionFavorite">
-    No fave found. :(
+    No saved favorite found.<br>
+    <a ui-sref=public.signup><span class="inputbutton">Sign Up</span></a>
   </div>
 </div>

@@ -101,6 +101,14 @@
   background-color: #557c3e;
   text-align: center;
 }
+
+.menu-item-photo-solo {
+  position: relative;
+  right: 30%;
+  width: 80px;
+  background-color: #557c3e;
+  text-align: center;
+}
 .menu-item-description {
   padding-right: 30px;
 }
@@ -124,6 +132,8 @@ h3.menu-item-title {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    padding: 5px;
+    margin-top: 5px;
 }
 .disabled {
     opacity: 0.3;

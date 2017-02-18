@@ -24,6 +24,7 @@
           </span>
 
           <br>
+
       <input type="email" name="email" placeholder="Email"
         ng-model="signup.user.email" class="input"
         required>
@@ -45,14 +46,18 @@
         required
         ng-maxlength="5">
         <span
-          ng-if="signupForm.lastname.$error.required && signupForm.lastname.$touched">
+          ng-if="signupForm.favorite.$error.required && signupForm.favorite.$touched">
           Favorite dish is required
+        </span>
+        <span ng-if="signupForm.favorite.$error.maxlength">
+          Enter the short name, such as "A4." This should be less than 5 characters.
         </span>
         <span ng-if="signupForm.lastname.$touched && signup.notFound">
           No such menu number exists
         </span>
 
         <br>
+
       <button
         ng-disabled="signupForm.$invalid"
         ng-click="signup.submit()"
