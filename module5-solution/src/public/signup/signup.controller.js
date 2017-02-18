@@ -25,6 +25,7 @@ function SignUpController(MenuService) {
       .catch(function (error) {
         console.log("Caught an error");
         console.log(error);
+        MenuService.storeSessionFavorite(null);
         signup.notFound = true;
       })
     } else {

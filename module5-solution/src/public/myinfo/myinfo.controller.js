@@ -6,7 +6,8 @@ angular.module('public')
 
 MyInfoController.$inject = ['MenuService'];
 function MyInfoController(MenuService) {
-  var myinfo = this;
+  var infoCtrl = this;
+  infoCtrl.sessionFavorite = MenuService.sessionFavorite;
 }
 
 })();

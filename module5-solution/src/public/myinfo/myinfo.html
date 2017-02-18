@@ -1,1 +1,9 @@
-<h1>My Awesome Info</h1>
+<div class="container">
+
+  <div ng-if="infoCtrl.sessionFavorite">
+    Found a fave!
+  </div>
+  <div ng-if="!infoCtrl.sessionFavorite">
+    No fave found. :(
+  </div>
+</div>
