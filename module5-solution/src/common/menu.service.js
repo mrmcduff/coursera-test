@@ -27,11 +27,19 @@ function MenuService($http, ApiPath) {
     });
   };
 
-  service.getSingleItem = function (shortName) {
-    return $http.get(ApiPath + '/menu_items/' + shortName + ".json").then(function (response) {
-      return response.data;
+  service.getSingleItemPromise = function (shortName) {
+    var response = $http({
+      method: "GET",
+      url: (ApiPath + '/menu_items/' + shortName + ".json")
     });
-  };  
+
+    return response;
+  };
+
+  service.storeSessionFavorite = function(item) {
+    service.sessionFavorite = item;
+  }
+
 }
 
 

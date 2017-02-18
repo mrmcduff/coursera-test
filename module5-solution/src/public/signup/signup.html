@@ -40,21 +40,28 @@
         </span>
         <br>
 
+      <input type="text" name="favorite" placeholder="Favorite Menu Item"
+        ng-model="signup.user.favorite" class="input"
+        required
+        ng-maxlength="5">
+        <span
+          ng-if="signupForm.lastname.$error.required && signupForm.lastname.$touched">
+          Favorite dish is required
+        </span>
+        <span ng-if="signupForm.lastname.$touched && signup.notFound">
+          No such menu number exists
+        </span>
+
+        <br>
       <button
         ng-disabled="signupForm.$invalid"
         ng-click="signup.submit()"
-        class="inputbutton">Submit</button>
+        >Submit</button>
 
-        <div style="margin-top: 10px;">
-          Form valid? {{ signupForm.$valid }}
-          Form Complete? {{signup.completed}}
-        </div>
     </form>
   </fieldset>
 
   <div id="info" ng-if="signup.completed">
-    Name: {{ signup.user.firstname}} {{signup.user.lastname}}<br>
-    Email: {{ signup.user.email}} <br>
-    Phone: {{ signup.user.phone }}
+    Your information has been saved.
   </div>
 </div>
