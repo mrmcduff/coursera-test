@@ -14,7 +14,7 @@ function SignUpController(MenuService) {
     console.log("submit");
     if (signup.user.favorite) {
       signup.notFound = false;
-      var promise = MenuService.getSingleItemPromise(signup.user.favorite);
+      var promise = MenuService.getSingleItemPromise(signup.user.favorite.toUpperCase());
       promise.then(function (response) {
         console.log(response.data);
         MenuService.storeSessionFavorite(response.data);
